@@ -1,21 +1,92 @@
 /* Styles */
 
-body{
-    text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-/* On définit le style de H1 */
-h1{
-    color: solid rgb(190, 70, 15)font-family:verdana;
-}
-
-/* On définit le style de p */
+/* On définit le style de p, h1, etc. */
 p{
 font-size: 20px;}
 
-/* Centrer l'image */
-img{
+.transparent-block {
+  position: center;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.829);
+  text-align: center;
+  padding: 10px;
+}
+
+body {
+  text-align: center;
+  text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          background-image: url("gif.gif"); /* Remplacez par le chemin de votre image */
+          background-repeat: no-repeat; /* Empêche la répétition de l'image si elle est plus petite que l'élément */
+          background-size: cover; /* Ajuste la taille de l'image pour couvrir l'élément */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: rgb(160, 7, 7);
+    text-shadow: rgb(255, 255, 255) 1px 0 10px;
+    margin-top: 30px;
+}
+
+.container {
+  overflow: hidden; /* Permet de gérer le débordement du texte */
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap; /* Pour que ça reste responsive sur petits écrans */
+}
+
+.text-section {
+    max-width: 400px;
+    text-align: left;
+      text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+.text-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+      text-shadow: rgb(255, 255, 255) 1px 0 10px;
+}
+
+form label {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: rgb(151, 58, 15);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(150, 50, 10);
+}
+
+img{
+  float: right; /* Aligne l'image à droite */
+  margin-left: 0px; /* Ajoute une marge à gauche de l'image pour un peu d'espace */
 }

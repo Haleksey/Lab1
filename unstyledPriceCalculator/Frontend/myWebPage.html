@@ -5,26 +5,31 @@
   <!-- On fait appel au fichier qui contiendra nos styles; pour + de propreté on ne définit pas le style directement ici; le rel permet de défrinir le type d'appel et le ref est le nom de la variable qu'on appelle -->
   <link rel="stylesheet" href="style.css">
 </head>
-<img src="Image1_Frontend.png" alt="Frontend" width="1000" height="500">
+
 <body>
+ <h1 >Wanna meet some rich mens?</h1>
+<div class="main-content">
+    <div class="text-section">
+      <p>How much should you charge for a boyfriend? Fill out the form and find out!</p>
 
-<div>
-  <h1 >How much to charge?</h1>
-  <p >If you were a freelance web designer, how much should you charge for a website? Fill out the form and find out!</p>
-</div>
+      <form id="budget" action="javascript:calculatePrice()">
+        <label for="salary">What annual salary seems suitable for your boyfriend to be with you?</label><br>
+        <input type="text" id="salary" name="salary"/><br><br>
 
-<div>
-  <form id="budget" action="javascript:calculatePrice()">
-    <label for="salary">What annual salary seems suitable for you?</label>
-    <input type="text" id="salary" name="salary"/><br><br>
-    <label for="days">How many days do you think it will take you to make the website?</label>
-    <input type="text" id="days" name="days"/><br><br>
-    <input type="submit" value="Calculate your price!"><br><br>
-    <label id="finalPrice"> ??? </label>
-  </form>
-</div>
+        <label for="days">How many days do you think it will take you before breakup?</label><br>
+        <input type="text" id="days" name="days"/><br><br>
 
+        <input type="submit" value="Calculate your price!"><br><br>
 
+        <label id="finalPrice">???</label>
+      </form>
+    </div>
+
+    <div class="image-section">
+      <img src="Image1_Frontend.png" alt="Frontend" width="700" height="450">
+    </div>
+  </div>
+  
 <script>
   function calculatePrice() {
     var s = document.getElementById("salary").value;
@@ -35,9 +40,10 @@
     let finalPrice = 0;
     dailyRate = s/365;
     finalPrice = dailyRate * d;
-    document.getElementById("finalPrice").innerHTML = finalPrice;
+    document.getElementById("finalPrice").innerHTML = finalPrice.toFixed(2) + '£';
+    
   }
   </script>
 
-</body>
-</html>
+</body> 
+</html> 
